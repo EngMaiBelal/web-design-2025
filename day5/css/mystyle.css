@@ -1,0 +1,19 @@
+/* Start Main Content */
+.main-content ul li, .main-content ol li{
+    border: 2px solid black;
+}
+.main-content ul{
+    list-style-type: square ;
+    list-style-position: outside;
+}
+.main-content ol{
+    list-style-type:lower-roman ;
+     list-style-position: inside;
+}
+table, td, th{
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+    width:100%
+}

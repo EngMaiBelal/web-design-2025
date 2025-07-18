@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll to Section on Search</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    section {
+      padding: 100px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+<div class="text-bg-dark pt-1 pb-1 sticky-top">
+    <div class="container">
+      <h2 class="mb-3">Search to Scroll</h2>
+      <input type="text" id="searchInput" class="form-control" placeholder="Type: home, about, services, contact...">
+    </div>
+</div>
+
+<!-- Sections -->
+<section id="home" class="bg-light">
+  <div class="container">
+    <h3>Home Section</h3>
+    <p>This is the home section content.</p>
+  </div>
+</section>
+
+<section id="about" class="bg-secondary text-white">
+  <div class="container">
+    <h3>About Section</h3>
+    <p>Details about us...</p>
+  </div>
+</section>
+
+<section id="services" class="bg-light">
+  <div class="container">
+    <h3>Services Section</h3>
+    <p>Here are our services.</p>
+  </div>
+</section>
+
+<section id="contact" class="bg-secondary text-white">
+  <div class="container">
+    <h3>Contact Section</h3>
+    <p>How to reach us.</p>
+  </div>
+</section>
+
+<script>
+  const searchInput = document.getElementById("searchInput");
+
+  searchInput.addEventListener("change", function () {
+    const query = this.value.trim().toLowerCase();
+
+    const section = document.getElementById(query);
+
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    } else {
+      alert("Section not found! Try: home, about, services, contact.");
+    }
+  });
+</script>
+
+</body>
+</html>

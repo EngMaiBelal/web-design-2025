@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery AJAX Example</title>
+  <style>
+    .user {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h1>Users List (AJAX with jQuery)</h1>
+  <div id="users">Loading...</div>
+
+  <script>
+    $(document).ready(function () {
+      $.ajax({
+        url: 'https://jsonplaceholder.typicode.com/users',
+        method: 'GET',
+        success: function (data) {
+          $('#users').empty(); 
+          data.forEach(function (user) {
+            $('#users').append(`
+              <div class="user">
+                <strong>${user.name}</strong><br>
+                Email: ${user.email}<br>
+                City: ${user.address.city}
+              </div>
+            `);
+          });
+        },
+        error: function () {
+          $('#users').html('<p style="color:red;">error</p>');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

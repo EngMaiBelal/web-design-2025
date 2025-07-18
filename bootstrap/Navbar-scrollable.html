@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* without it --> conflict scrollpys */
+        .scroll-area {
+            height: 100px;
+            overflow: auto;
+            margin-bottom: 2rem;
+            border: 1px solid #ccc;
+        }
+
+        /* <div tabindex="0" ...>
+            tabindex="-1"
+            tab الكيبورد */
+    </style>
+</head>
+
+<body>
+    <!-- Navbar1 -->
+    <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 sticky-top">
+        <a class="navbar-brand" href="#">Navbar 1</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1">First</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">Second</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                    aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scroll-area scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        <h4 id="scrollspyHeading1">First heading</h4>
+        <p>First Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus in nam quae est repellat
+            unde debitis quis consequuntur explicabo error, tenetur dignissimos neque porro, maiores blanditiis adipisci
+            nisi quos?</p>
+        <h4 id="scrollspyHeading2">Second heading</h4>
+        <p>Second Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus in nam quae est repellat
+            unde debitis quis consequuntur explicabo error, tenetur dignissimos neque porro, maiores blanditiis adipisci
+            nisi quos?</p>
+        <h4 id="scrollspyHeading3">Third heading</h4>
+        <p>Third Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus in nam quae est repellat
+            unde debitis quis consequuntur explicabo error, tenetur dignissimos neque porro, maiores blanditiis adipisci
+            nisi quos?</p>
+        <h4 id="scrollspyHeading4">Fourth heading</h4>
+        <p>Fourth Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus in nam quae est repellat
+            unde debitis quis consequuntur explicabo error, tenetur dignissimos neque porro, maiores blanditiis adipisci
+            nisi quos?</p>
+        <h4 id="scrollspyHeading5">Fifth heading</h4>
+        <p>Fifth Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus in nam quae est repellat
+            unde debitis quis consequuntur explicabo error, tenetur dignissimos neque porro, maiores blanditiis adipisci
+            nisi quos?</p>
+    </div>
+    <div class="text-bg-dark text-center">Second-Scrollable-Navbar</div>
+    <nav id="navbar-example3" class="navbar bg-body-tertiary px-3 mb-3">
+        <a class="navbar-brand" href="#">Navbar 2</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading21">First</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading22">Second</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading23">Third</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading24">Fourth</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading25">Fifth</a>
+            </li>
+        </ul>
+    </nav>
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="scroll-area scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+        <h4 id="scrollspyHeading21">First heading</h4>
+        <p>First Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus in nam quae est repellat
+            unde debitis quis consequuntur explicabo error, tenetur dignissimos neque porro, maiores blanditiis adipisci
+            nisi quos?</p>
+
+        <h4 id="scrollspyHeading22">Second heading</h4>
+        <p>Second Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus in nam quae est repellat
+            unde debitis quis consequuntur explicabo error, tenetur dignissimos neque porro, maiores blanditiis adipisci
+            nisi quos?</p>
+
+        <h4 id="scrollspyHeading23">Third heading</h4>
+        <p>Third Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus in nam quae est repellat
+            unde debitis quis consequuntur explicabo error, tenetur dignissimos neque porro, maiores blanditiis adipisci
+            nisi quos?</p>
+
+        <h4 id="scrollspyHeading24">Fourth heading</h4>
+        <p>Fourth Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus in nam quae est repellat
+            unde debitis quis consequuntur explicabo error, tenetur dignissimos neque porro, maiores blanditiis adipisci
+            nisi quos?</p>
+
+        <h4 id="scrollspyHeading25">Fifth heading</h4>
+        <p>Fifth Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae natus in nam quae est repellat
+            unde debitis quis consequuntur explicabo error, tenetur dignissimos neque porro, maiores blanditiis adipisci
+            nisi quos?</p>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

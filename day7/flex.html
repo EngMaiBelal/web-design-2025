@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sec2{
+            height:20vh;
+            background-color: aqua;
+        }
+        .parent{
+            margin-top: -20px;
+            display:flex;
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+            /* align-content:center; */
+            /* flex-flow: direction wrap; */
+            flex-flow: row wrap;
+
+            justify-content: space-between;
+            /* align-items: center; */
+            height: 100vh;
+            /* border: 1px solid black; */
+        }
+        .parent div {
+            /* width ---> row, height---> column, high periority */
+            /* flex-basis: 300px;  */
+            /* flex-basis: auto; */
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .red {
+            background-color: red;
+            order:2
+        }
+
+        .green {
+            background-color: green;
+            order:1;
+            /*flex-shrink: 1; default*/
+            /* flex-shrink: 2; */
+            /* flex-grow: 0 ; default*/
+            /* flex-grow: 2; */
+            /* flex:grow shrink basis; */
+            align-self: flex-start;
+
+        }
+
+        .blue {
+            background-color: blue;
+            order:4;
+        }
+
+        .orange {
+            background-color: orange;
+            order:3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sec2">
+
+    </div>
+    <div class="parent">
+        <div class="red">Red</div>
+        <div class="green">Green</div>
+        <div class="blue">Blue</div>
+        <div class="orange">Orange</div>
+    </div>
+</body>
+
+</html>

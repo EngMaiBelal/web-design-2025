@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagination Example</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .item {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body class="p-5">
+
+  <h2>Item List</h2>
+  <div id="dataContainer"></div>
+
+  <nav>
+    <ul id="pagination" class="pagination justify-content-center mt-4"></ul>
+  </nav>
+
+  <script>
+    // Sample data (e.g., article titles or product names)
+    const data = [
+      "Item 1", "Item 2", "Item 3", "Item 4", "Item 5",
+      "Item 6", "Item 7", "Item 8", "Item 9", "Item 10",
+      "Item 11", "Item 12", "Item 13", "Item 14", "Item 15"
+    ];
+
+    const itemsPerPage = 5;
+    let currentPage = 1;
+
+    function displayData(page) {
+      const container = document.getElementById('dataContainer');
+      container.innerHTML = "";
+
+      const start = (page - 1) * itemsPerPage;
+      const end = start + itemsPerPage;
+      console.log(start, end);
+      const pageItems = data.slice(start, end);
+
+      pageItems.forEach(item => {
+        const div = document.createElement('div');
+        div.className = "item";
+        div.textContent = item;
+        container.appendChild(div);
+      });
+    }
+
+    function setupPagination() {
+      const pageCount = Math.ceil(data.length / itemsPerPage);
+      const pagination = document.getElementById('pagination');
+      pagination.innerHTML = "";
+
+      for (let i = 1; i <= pageCount; i++) {
+        const li = document.createElement('li');
+        li.className = `page-item ${i === currentPage ? 'active' : ''}`;
+
+        const link = document.createElement('a');
+        link.className = "page-link";
+        link.href = "#";
+        link.textContent = i;
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          currentPage = i;
+          displayData(currentPage);
+          setupPagination();
+        });
+
+        li.appendChild(link);
+        pagination.appendChild(li);
+      }
+    }
+
+    // Load first page initially
+    displayData(currentPage);
+    setupPagination();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-background{
+            background-color: aqua;
+            color: black;
+        }
+        .spacing{
+            padding: 2px;
+        }
+        div{
+            height: 200px;}
+    </style>
+</head>
+<body>
+    <div id="demo">
+        Test Classlist
+    </div>
+    <!-- <button onclick="add()" id="convertStyle"> add Me</button>
+    <button onclick="remove()" id="convertStyle"> remove Me</button> -->
+
+    <button onclick="toggle()">Toggle</button>
+    <script>
+        function toggle(){
+            document.getElementById('demo').classList.toggle('main-background');
+        }
+
+        // function add(){
+        //     document.getElementById('demo').classList.add('main-background','spacing')
+        // }
+        //         function remove(){
+        //     document.getElementById('demo').classList.remove('main-background','spacing')
+        // }
+
+    </script>
+</body>
+</html>

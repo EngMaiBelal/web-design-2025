@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin:0;padding:0;}
+        div{
+            height: 100vh;
+        }
+        #sec1{
+            background-color: aqua;
+        }
+        #sec2{
+            background-color: black;
+        }
+        button{
+            width:100px;
+            height: 100px;
+            border-radius: 50%;
+            position:fixed;
+            bottom: 1rem;
+            right: 1rem;
+            display:none
+        }
+    </style>
+</head>
+<body>
+    <div id="sec1"></div>
+    <div id="sec2"></div>
+    <!-- <button id="up" name="" onclick="test()">Up</button> -->
+    <button id="up" name="">Up</button>
+    <script>
+        // let upBtn =document.getElementById('up')
+        // console.log(up)
+        window.onscroll = function(){
+            if(window.scrollY >= 100){
+                up.style.display='block'
+            }else{
+                up.style.display='none'
+            }
+        }
+        // window has events
+        // window.scrollY // value scroll y
+        // window.scrollx // value scroll x
+        // window.scrollTo(specific position)
+        // window.scrollBY(x+=1)
+
+        up.onclick = function(){
+            window.scrollTo({
+                left:0,
+                top:0,
+                behavior:"smooth"
+            })
+        }
+
+    </script>
+</body>
+</html>

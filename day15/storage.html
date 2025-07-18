@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .parent{
+        display:flex
+    }
+    div{
+        background-color: red;
+        border:1px solid;
+        width:500px;
+        height:500px;
+    }
+</style>
+</head>
+<body>
+    <div class="parent">
+        <div id="sec1"></div>
+        <div id="sec2"></div>
+    </div>
+    <button id="convertBtn">Convert Background</button>
+    <script>
+        //localstorage --> browser
+        convertBtn.addEventListener("click",
+        function(){
+            localStorage.setItem('essam', 'blue');
+            localStorage.setItem('test', 'white');
+            sec1.style.backgroundColor = localStorage.getItem('essam')
+            }
+        )
+        if(localStorage.getItem('essam')){
+            sec1.style.backgroundColor = localStorage.getItem('essam');
+        }
+        localStorage.clear();
+        // localStorage.removeItem('test')
+        //////////////////////////////////////////////////////////
+        //session storage --> tab , refresh the same tab
+        // convertBtn.onclick = function(){
+        //     sessionStorage.setItem("backgroundColor", "blue");
+        //     sessionStorage.setItem("color", "white");
+
+        //     sec1.style.backgroundColor = sessionStorage.getItem("backgroundColor")
+        // }
+        // if(sessionStorage.getItem("backgroundColor")){
+        //     sec1.style.backgroundColor = sessionStorage.getItem("backgroundColor")
+        // }
+        // sessionStorage.removeItem('color');
+        // sessionStorage.clear();
+
+     
+    </script>
+</body>
+</html>

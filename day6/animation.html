@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Animation and transform, transition</title>
+    <style>
+        div {
+            width: 300px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+            /*transform: translate(50px,100px);*/
+        }
+
+        .first {
+            margin: auto;
+            /* transform: translate(200px, 0) ; */
+            /* x-axis,y-axis   */
+            /* transform: rotate(-20deg) */
+            /* transform: scale(2, 3); */
+            /* transform: scaleX(2); */
+            /* transform: scaleY(3); */
+            /* 2* width, 3* height */
+
+            /* transform: skew(40deg, 10deg);
+        skewX(20deg)
+        skewY(30deg) */
+            transition-property: background-color;
+            transition-duration: 1s;
+            transition-delay: 3s;
+            /* https://www.w3schools.com/css/tryit.asp?filename=trycss3_transition_speed */
+            transition-timing-function: ease;
+            /* transition: property duration function delay */
+        }
+
+        .first:hover {
+            /* transform: scale(2, 3); */
+            background-color: brown;
+
+        }
+        .second{
+            margin:auto;
+            background-color: black;
+            color:white;
+            animation-name: shahd;
+            animation-duration: 10s;
+            animation-delay:2s;
+            animation-timing-function: ease;
+        }
+        @keyframes shahd{
+            /* from{background-color: yellow;}
+            to{background-color: green;} */
+            0%{background-color: red;}
+            25%{background-color: yellow;}
+            50%{background-color: blue;}
+            100%{background-color: green;}
+        }
+        @keyframes fatima{
+            from{transform: scale(1,0);}
+            to{transform: scale(2,3);}
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>The translate() Method</h1>
+    <p>The translate() method moves an element from its current position:</p>
+
+    <div class="first">
+        This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+    </div>
+    <div class="second">
+        This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+    </div>
+
+</body>
+
+</html>

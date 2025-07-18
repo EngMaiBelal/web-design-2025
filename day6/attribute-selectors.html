@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selector</title>
+    <style>
+        div, section{
+            background-color: rgba(255, 255, 0, 0.749);
+            border: 2px solid black;
+        }
+
+        div[width]{
+            color: red;
+        }
+        /* a[target]{
+            color: black
+        } */
+        /* a[target="_blank"]{
+            color:blueviolet;
+        } */
+        /*one word --- contain xx*/
+        /* a[data ~="xx"]{  
+                background-color: blue;
+        } */
+        /*start with (= xx | =xx-)*/
+        /* a[data |="xx"]{ 
+                background-color: blue;
+        } */
+        a[data |="xx"]{ 
+                background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div width="100%">
+        <p>Lorem ipsum dolor sit amet <span>consectetur</span>, adipisicing elit. Unde corporis dolorum quam velit, id ad excepturi temporibus possimus dolore recusandae. Numquam nulla molestiae, corporis omnis consequuntur laudantium ipsam quidem quas!</p>
+        <!-- ~ attribute selector -->
+        <!-- <a href="" target="_self"  data="jjkj xx x">W3 school</a>  -->
+        <!-- | attribute selector -->
+        <!-- <a href="" target="_self"  data="xx-kkk  ;l;;">W3 school</a> 
+        <a href="" target="_self"  data="sadsfr xx-kkk">W3 school</a> 
+        <a href="" target="_blank" data="xx">facebook</a> -->
+        <a href="" target="_self"  data="">W3 school</a> 
+        <a href="" target="_blank" data="">facebook</a>
+    </div>
+    <section width="50%">
+        <button>Click</button>
+        Second Section
+    </section>
+</body>
+</html>

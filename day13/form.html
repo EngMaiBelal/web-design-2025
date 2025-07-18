@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- html validation -->
+    <!-- frontend validation -->
+    <!-- backend validation -->
+    <form name="myForm" action="" onsubmit="return validate()">
+        <label for="">FirstName</label>
+        <input type="text" name="fname"><br><br>
+        <span></span>
+
+        <label for="">Password</label>
+        <input type="password" name="password"><br><br>
+
+        <label for="">SecondName</label>
+        <input type="text" name="lname"><br><br>
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        function validate(){
+            let firstName = document.forms['myForm']['fname'].value;
+            let lastName = document.forms['myForm']['lname'].value;
+            let password = document.forms['myForm']['password'].value;
+            if(firstName === ""){
+                alert('please enter correct name');
+                confirm('Are you sure');
+                return false;
+            }
+        }
+
+    </script>
+</body>
+</html>

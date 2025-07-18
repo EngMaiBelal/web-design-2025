@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent" style="background-color: aquamarine;"><!-- firstchild -->
+        <p id="first">first</p>
+        <p id="second">second</p>
+    </div>
+    <div></div>
+    <button onclick="addEle()">Add Element</button>
+    <button onclick="delEle()">Remove Element</button>
+    <script>
+        let parent = document.getElementById('parent'); //parent
+        function addEle(){
+            const newImage = document.createElement('img');//<img>
+            newImage.setAttribute('src', '1.png');
+            newImage.setAttribute('width', '300px'); // <img src="1.png" width='300px'>
+            // parent.appendChild(newImage); // last child
+            // parent.insertBefore(newImage, parent.children[1]); // child in custom position
+            // parent.after(newImage); // sibling
+            // parent.before(newImage); // sibling
+            parent.append(newImage); // lastchild
+            // parent.prepend(newImage); // firstchild
+            // console.log(parent.children); // html collection
+            // console.log(parent.childNodes); // html collection
+
+        }
+
+        
+        function delEle(){
+            // parent.firstElementChild.remove();
+            // parent.firstChild.remove();
+            // parent.lastElementChild.remove();
+            parent.children[0].remove();
+        }
+        // console.log(parent.firstElementChild);
+        // console.log(parent.firstChild);
+        parent.nextElementSibling.innerHTML = 'text';
+
+        console.log(parent.childNodes); // nodelist
+    </script>
+</body>
+</html>

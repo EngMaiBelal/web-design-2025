@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spinner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .div-parent{
+            height: 100vh !important;
+            background-color: rgb(82 161 66);
+        }
+        .play-video{
+            width: 6rem;
+            height: 6rem;
+        }
+
+        .circle{
+            width:3.5rem;
+            height:3.5rem;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .arrow-right {
+            width: 0;
+            height: 0;
+            border-top: 1.2rem solid transparent;
+            border-bottom: 1.2rem solid transparent;
+            border-left: 2.2rem solid #fdfdfd;
+            }
+    </style>
+</head>
+<body>
+    <div class="div-parent d-flex justify-content-center align-items-center">
+        <div class="play-video position-relative">
+            <div id="spinner-frist" class="spinner-grow w-100 h-100" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <div class="position-absolute top-50 start-50 translate-middle arrow-right" >
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

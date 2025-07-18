@@ -1,0 +1,18 @@
+Task-js show result in documentation not console
+1) Write a js program to input marks of five subjects Physics/20, Chemistry, Biology, Mathematics and Computer. Calculate and show to the user (the percentage and the grade) according to following: 
+	Percentage >= 90%: Grade A
+	Percentage >= 80%: Grade B
+	Percentage >= 70%: Grade C
+	Percentage >= 60%: Grade D
+	Percentage >= 40%: Grade E
+	Percentage <   40%: Grade F
+	NOTE:-
+	* The full mark of each subject is 20 and max grade: 100 required
+2) Get 3 numbers from user and calculate max and minimum. bounce
+3) Get 1 number from user and check if the number negative or positive. Bounce 
+4) Get 1 number from user and check if the number even or odd. bounce 
+5) Get from user (number, root) Calculate specific root of any number. required 
+6) Get from user (num1, num2, operation)
+   simple-calculator task simple calculator + - * / % required
+
+الاربعاء الساعه 9 صباحا

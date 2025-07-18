@@ -1,0 +1,9 @@
+1- Spacing (padding, margin)
+2- Container, container fluid
+3- Text -->text-bg-primary, bg-primary
+4- Sizing --> w, h, max-w , vh, vw
+5- Position
+6- Shadow
+7- Display
+8- Grid , col, gapping , media breakpoints 
+9- Media query CSS

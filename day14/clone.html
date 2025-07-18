@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <p id="mainPar">Hello</p>
+        <button id="btn">Copy paragraph</button>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        btn.addEventListener("click", clonePar)
+        function clonePar(){
+            let newPar = mainPar.cloneNode(true);//false
+            newPar.id = 'second';
+            demo.appendChild(newPar);
+           swal({
+                title: "Good job!",
+                text: "Successefuly clone",
+                icon: "success",
+                button: "Good Job",
+                });
+        }
+
+    </script>
+</body>
+</html>
