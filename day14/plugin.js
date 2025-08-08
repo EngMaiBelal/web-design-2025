@@ -76,28 +76,28 @@ function redirect(){
 // }
 // clearInterval(iterval1);
 //////////////////////////////////////////////////
-// let par = document.getElementById('demo');
-// let section = document.getElementById('counter-section')
-// // counter
-// par.innerHTML = 0;
-// let x ;
-// function counter(){
-//     par.innerHTML = parseInt(par.innerHTML) + 1;//1,2,3
-//     if(parseInt(par.innerHTML) === 100 ){
-//         clearInterval(x);
-//     }
-// }
+let par = document.getElementById('demo');
+let section = document.getElementById('counter-section')
+// counter
+par.innerHTML = 0;
+let x ;
+function counter(){
+    par.innerHTML = parseInt(par.innerHTML) + 1;//1,2,3
+    if(parseInt(par.innerHTML) === 100 ){
+        clearInterval(x);
+    }
+}
 
 
 // call interval
-// const observer = new IntersectionObserver(function(entries, observer){
-//     entries.forEach(function(entery){
-//         if(entery.isIntersecting){
-//            x= setInterval(counter , 5);
-//         }
-//     })
-// }, {threshold:0.5}) 
-// observer.observe(section)
+const observer = new IntersectionObserver(function(entries, observer){
+    entries.forEach(function(entery){
+        if(entery.isIntersecting){
+           x= setInterval(counter , 5);
+        }
+    })
+}, {threshold:0.5}) 
+observer.observe(section)
 
 
 
